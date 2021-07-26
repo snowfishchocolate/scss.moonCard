@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/mood_card.css">
+<body>
+
+
+   
+
+    <div data-relative-input="true" id="scene">
+        <div class="picture123"><img src="./456.png" style="z-index: -3;"></div>
+        <div data-depth="0.09" class="picture1234"><img src="./wolf-.png"></div>
+            <div data-depth="0.7" class="card">
+                <div class="text">Moon Card</div>
+                <div id="stars">
+                    <div class="star" style="top: 0px;left: 500px;"></div> 
+                </div>  
+            </div>
+            <div data-depth="0.2" class="moon"></div>
+            <div data-depth="0.2" class="cloud">
+                <div class="square"></div>
+                <div class="bigcircle"></div>
+                <div class="smallcircle"></div>
+            </div>
+        </div>
+
+            <!-- <div class="allstart">老師版星星
+                <div class="start1"></div>
+                <div class="start2"></div>
+                <div class="start3"></div>
+                <div class="start4"></div>
+                <div class="start5"></div>
+                <div class="start6"></div>
+                <div class="start7"></div>
+                <div class="start8"></div>
+                <div class="start9"></div>
+                <div class="start10"></div>
+                <div class="start11"></div>
+                <div class="start12"></div>
+                <div class="start13"></div>
+                <div class="start14"></div>
+                <div class="start15"></div>
+                <div class="start16"></div>
+                <div class="start17"></div>
+                <div class="start18"></div>
+                <div class="start19"></div>
+                <div class="start20"></div>
+                <div class="start21"></div>
+                <div class="start22"></div>
+                <div class="start23"></div>
+                <div class="start24"></div>
+                <div class="start25"></div>
+                <div class="start26"></div>
+                <div class="start27"></div>
+                <div class="start28"></div>
+                <div class="start29"></div>
+                <div class="start30"></div>
+            </div> -->
+
+
+
+
+
+
+
+
+ 
+    <script>
+         var stars = document.getElementById('stars')
+
+// js随机生成流星 網路版星星
+for (var j=0;j<30;j++) {
+  var newStar = document.createElement("div")
+  newStar.className = "star"
+  newStar.style.top = randomDistance(500, -100) + 'px'
+  newStar.style.left = randomDistance(1300, 300) + 'px'
+  stars.appendChild(newStar)
+}
+
+// 封装随机数方法
+function randomDistance (max, min) {
+  var distance = Math.floor(Math.random() * (max - min + 1) + min)
+  return distance
+}
+</script>
+
+
+珍珠奶茶 CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script> 
+
+<script>
+var scene = document.getElementById('scene');
+var parallaxInstance = new Parallax(scene, {
+  relativeInput: true
+});
+parallaxInstance.friction(0.2, 0.2);
+</script>
+
+
+
+
+</body>
+</html>
